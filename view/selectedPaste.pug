@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+    .container
+        h1 <strong>Paste Title: </strong> #{paste.title}
+        br
+        h1 <strong>Paste Content:</strong>
+        p= paste.content 
+        br
+        a.btn.btn-secondary(href='http://localhost:3000/pastesList') Go Back To Paste List
+        br
+        br
+        -var deleteUrl = 'http://localhost:3000/delete/' + paste.id;
+        form(method= 'POST', action= deleteUrl)
+            button.btn.btn-danger(type='submit') DELETE PASTE

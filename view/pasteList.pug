@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+    .container 
+        h1 <strong>Paste List</strong>
+        br
+        a.btn.btn-secondary(href='http://localhost:3000/') Add New Paste 
+        br
+        br
+        ul
+            each paste in pastes
+                li
+                    -var selectedPaste = 'http://localhost:3000/pastes/' + paste.id
+                    a(href=selectedPaste)= paste.title

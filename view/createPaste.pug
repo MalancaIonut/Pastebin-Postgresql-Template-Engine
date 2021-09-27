@@ -1,0 +1,18 @@
+extends layout 
+
+block content 
+    .container.bg-secondary.text-white
+        br
+        form(action='/newPaste' method='POST')
+            .mb-3 
+                label.form-label(for='content') <strong>New Paste</strong>
+                textarea#content.form-control(rows='3' name='content')
+            .mb-3.row    
+                label.col-sm-2.col-form-label(for='title') <strong>Paste Name / Title:</strong>
+                .col-sm-10
+                    input#title.form-control(type='text', name='title')
+            button.btn.btn-dark(type='submit') Create New Paste
+        br
+    br
+    .container 
+        a.btn.btn-secondary(href='http://localhost:3000/pastesList') View Paste List

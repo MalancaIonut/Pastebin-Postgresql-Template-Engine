@@ -1,0 +1,7 @@
+extends layout 
+
+block content
+    .container
+        h1=message
+        -var toLocation = 'http://localhost:3000' + location;
+        a.btn.btn-secondary(href= toLocation) Go To Paste List
