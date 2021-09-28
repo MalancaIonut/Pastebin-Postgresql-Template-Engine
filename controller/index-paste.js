@@ -44,7 +44,7 @@ router.get('/pastes/:id', (req, res) => {
     });
 });
 
-router.post('/delete/:id', (req, res) => {
+router.post('/pastes/:id/delete', (req, res) => {
     query.deletePaste(req.params.id)
     .then(response => {
         const ResMessage = response;
