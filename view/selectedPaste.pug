@@ -10,6 +10,6 @@ block content
         a.btn.btn-secondary(href='http://localhost:3000/pastesList') Go Back To Paste List
         br
         br
-        -var deleteUrl = 'http://localhost:3000/delete/' + paste.id;
+        -var deleteUrl = 'http://localhost:3000/pastes/' + paste.id + '/delete';
         form(method= 'POST', action= deleteUrl)
             button.btn.btn-danger(type='submit') DELETE PASTE
